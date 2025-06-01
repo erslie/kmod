@@ -7,5 +7,5 @@ $ sudo insmod ./kpr.ko
 
 **Check if the module is loaded**
 ```
-$ dmesg "hello"
+$ sudo dmesg | grep hello
 ```
