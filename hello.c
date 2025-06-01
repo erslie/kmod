@@ -1,5 +1,4 @@
-#include <linux/module.h>
-#include <linux/kernel.h>
+#include "klib.h"
 
 MODULE_LICENSE("Dual BSD/GPL");
 MODULE_AUTHOR("ersli");

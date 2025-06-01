@@ -1,7 +1,18 @@
-obj-m := hello.o
+ifeq ($(KERNELRELEASE),)
+    KERNELDIR ?= /lib/modules/$(shell uname -r)/build
+    PWD := $(shell pwd)
 
-all:
-		make -C /lib/modules/$(shell uname -r)/build M=$(PWD) modules
+modules:
+	$(MAKE) -C $(KERNELDIR) M=$(PWD) modules
+
+modules_install:
+	$(MAKE) -C $(KERNELDIR) M=$(PWD) modules_install
 
 clean:
-		make -C /lib/modules/$(shell uname -r)/build M=$(PWD) clean
+	$(MAKE) -C $(KERNELDIR) M=$(PWD) clean
+
+.PHONY: modules modules_install clean
+
+else
+    obj-m := hello.o kpr.o
+endif
