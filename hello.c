@@ -6,7 +6,7 @@ MODULE_DESCRIPTION("A simple hello world kernel module with an exported function
 
 void my_hello_function(int count)
 {
-    printk(KERN_INFO "hello: hello, Kernel world! count:%d\n", count);
+    printk(KERN_INFO "hello: Hello, kernel world! count:%d\n", count);
 }
 
 EXPORT_SYMBOL(my_hello_function);
