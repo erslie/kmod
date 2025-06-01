@@ -2,7 +2,7 @@
 ```
 $ sudo make
 $ sudo insmod ./hello.ko
-& sudo insmod ./kpr.ko
+$ sudo insmod ./kpr.ko
 ```
 
 **Check if the module is loaded**
